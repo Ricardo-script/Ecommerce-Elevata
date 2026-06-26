@@ -419,4 +419,4 @@ Este projeto foi desenvolvido com foco em:
 
 O Ecommerce Elevata é um projeto de estudos desenvolvido para demonstrar a construção de uma aplicação moderna utilizando **React Native**, **Expo**, **Expo Router**, **NativeWind** e arquitetura **MVVM**.
 
-Embora utilize uma API pública para simulação dos dados, toda a estrutura foi planejada para reproduzir a organização encontrada em aplicações reais, priorizando organização, escalabilidade, manutenção e reutilização de código.
+Embora utilize uma API pública para simulação dos dados, toda a estrutura foi planejada para reproduzir a organização encontrada em aplicações reais, código organizado, escalabilidade, manutenção e reutilização de código.
