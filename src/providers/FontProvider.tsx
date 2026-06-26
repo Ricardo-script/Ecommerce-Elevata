@@ -6,10 +6,9 @@ import {
   useFonts,
 } from "@expo-google-fonts/inter";
 import * as SplashScreen from "expo-splash-screen";
-import { useCallback } from "react";
+import { useEffect } from "react";
 import { View } from "react-native";
-
-SplashScreen.preventAutoHideAsync();
+import { Loading } from "../shared/components/loading";
 
 export const FontProvider = ({ children }: React.PropsWithChildren) => {
   const [fontsLoaded, fontError] = useFonts({
@@ -18,19 +17,22 @@ export const FontProvider = ({ children }: React.PropsWithChildren) => {
     Inter_600SemiBold,
     Inter_700Bold,
   });
-  const onLayoutRootView = useCallback(async () => {
+
+  useEffect(() => {
+    SplashScreen.preventAutoHideAsync().catch(() => {});
+  }, []);
+
+  useEffect(() => {
     if (fontsLoaded || fontError) {
-      await SplashScreen.hideAsync();
+      SplashScreen.hideAsync().catch(() => {});
     }
   }, [fontsLoaded, fontError]);
 
   if (!fontsLoaded && !fontError) {
-    return null;
+    return <Loading />;
   }
 
-  return (
-    <View onLayout={onLayoutRootView} style={{ flex: 1 }}>
-      {children}
-    </View>
-  );
+  return <View style={containerStyle}>{children}</View>;
 };
+
+const containerStyle = { flex: 1 } as const;
