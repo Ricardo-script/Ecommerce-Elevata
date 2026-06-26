@@ -1,6 +1,6 @@
 import * as SecureStore from "expo-secure-store";
 
-const TOKEN_KEY = "@app:token";
+const TOKEN_KEY = "app_token";
 
 const isSecureStoreAvailable = typeof SecureStore?.setItemAsync === "function";
 
