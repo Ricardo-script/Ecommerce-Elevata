@@ -98,6 +98,11 @@ https://pravatar.cc/
 - AsyncStorage
 - Zustand
 
+### Versões do ambiente
+
+- Expo: ~54.0.34
+- Expo SDK: 54
+
 ---
 
 # Estilização
