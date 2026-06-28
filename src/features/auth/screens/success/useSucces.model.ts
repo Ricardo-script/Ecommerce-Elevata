@@ -8,7 +8,7 @@ export const useSuccess = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.replace("/home");
+      router.replace("/(tabs)/home");
     }, 4000);
     return () => clearTimeout(timer);
   }, []);

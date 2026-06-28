@@ -1,3 +1,13 @@
-import Login from "../features/auth/screens/login/login.view";
-const Index = () => <Login />;
-export default Index;
+import { Redirect } from "expo-router";
+
+export default function Index() {
+  return <Redirect href="/(auth)/login" />;
+}
+
+/*
+  if (isAuthenticated) {
+    return <Redirect href="/(tabs)/home" />;
+}
+
+return <Redirect href="/(auth)/login" />;
+*/
