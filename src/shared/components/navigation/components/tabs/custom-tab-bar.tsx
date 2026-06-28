@@ -2,16 +2,17 @@ import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { TAB_CONFIG } from "../constants/tab-config";
+import { TAB_CONFIG } from "../../constants/tab-config";
 import TabButton from "./tab-button";
 
 export default function CustomTabBar({ state, navigation }: BottomTabBarProps) {
   const insets = useSafeAreaInsets();
+  const TAB_BAR_BOTTOM_OFFSET = 12;
 
   return (
     <View
       className="absolute bottom-6 left-5 right-5"
-      style={{ bottom: insets.bottom + 12 }}
+      style={{ bottom: insets.bottom + TAB_BAR_BOTTOM_OFFSET }}
     >
       <View className="flex-row rounded-3xl bg-white px-2 py-2 shadow-lg">
         {state.routes.map((route, index) => {
