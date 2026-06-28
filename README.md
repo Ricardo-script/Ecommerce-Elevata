@@ -7,6 +7,22 @@
 Este projeto ainda está em fase de desenvolvimento ativo.  
 Funcionalidades podem mudar frequentemente e novas features estão sendo implementadas.
 
+## Índice
+
+- [Sobre o projeto](#sobre-o-projeto)
+- [Protótipo no Figma](#protótipo-no-figma)
+- [API utilizada](#api-utilizada)
+- [Tecnologias](#tecnologias)
+- [Estilização](#estilização)
+- [Executando o projeto](#executando-o-projeto)
+- [Variáveis de ambiente](#configuração-das-variáveis-de-ambiente)
+- [Autenticação](#-autenticação)
+- [Arquitetura](#arquitetura)
+- [Navegação com Expo Router](#navegação-com-expo-router)
+- [Organização das responsabilidades](#organização-das-responsabilidades)
+- [Objetivos do projeto](#objetivos-do-projeto)
+- [Considerações finais](#considerações-finais)
+
 ## Sobre o projeto
 
 <img width="117" height="100" alt="adaptive-icon-removebg-preview" src="https://github.com/user-attachments/assets/834d2180-da27-4b38-9aa4-63a4399b17c8" />
