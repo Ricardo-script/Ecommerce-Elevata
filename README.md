@@ -1,5 +1,12 @@
 
-# Ecommerce Elevata 
+# Ecommerce Elevata Mobile
+
+ ![Status](https://img.shields.io/badge/project-em%20desenvolvimento-orange)
+ 
+🚧 **Status: Em desenvolvimento** 🟠
+
+Este projeto ainda está em fase de desenvolvimento ativo.  
+Funcionalidades podem mudar frequentemente e novas features estão sendo implementadas.
 
 ## Sobre o projeto
 
