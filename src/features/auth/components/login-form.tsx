@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Keyboard, View } from "react-native";
 import { FormDataTypes, formSchema } from "../schemas/login.schema";
-import { useAuth } from "../screens/login/useAuth.model";
+import { useAuth } from "../screens/login/login.model";
 import { FeedbackModal } from "./feedback-modal";
 import { ForgotPassword } from "./forgot-password";
 

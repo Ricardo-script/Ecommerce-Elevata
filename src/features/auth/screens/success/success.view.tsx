@@ -3,7 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { ImageBackground, Text, View } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import background from "../../assets/images/background_success.png";
-import { useSuccess } from "./useSucces.model";
+import { useSuccess } from "./success.model";
 
 export default function Success() {
   const { name } = useSuccess();

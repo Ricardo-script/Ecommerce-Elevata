@@ -5,8 +5,9 @@ import { MiniCart } from "./mini-cart";
 
 export const Header = () => {
   const insets = useSafeAreaInsets();
-  const HEADER_TOP_OFFSET = 7;
   const user = useAuthStore((state) => state.user);
+  const HEADER_TOP_OFFSET = 7;
+  const PROFILE_USER_LOGIN = user && user.id + 17;
 
   return (
     <View
@@ -18,7 +19,7 @@ export const Header = () => {
       <View className="flex-row items-center, gap-3">
         <Image
           source={{
-            uri: "https://i.pravatar.cc/100",
+            uri: `https://i.pravatar.cc/150?u=${PROFILE_USER_LOGIN}`,
           }}
           className="w-10 h-10 rounded-full"
         />

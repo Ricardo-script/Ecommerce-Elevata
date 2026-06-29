@@ -26,7 +26,6 @@ export const InputSearch = ({ onSearch, ...rest }: InputSearchProps) => {
       onSubmitEditing={handleSubmit(handleSearch)}
       iconLeft={<Fontisto name="search" size={18} color="#737687" />}
       placeholderTextColor="#515B70"
-      className="text-color_gray"
       {...rest}
     />
   );

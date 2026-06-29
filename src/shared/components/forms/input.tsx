@@ -36,7 +36,7 @@ export const Input = <T extends FieldValues>({
           <View className="bg-[#F3F4F5] rounded-xl h-14 px-4 flex-row items-center gap-3">
             {iconLeft}
             <TextInput
-              className="text-color_black flex-1"
+              className="text-color_gray flex-1 w-full"
               secureTextEntry={isPassword && isHidden}
               value={field.value}
               onChangeText={field.onChange}

@@ -1,14 +1,13 @@
 import { Container } from "@/src/shared/components";
 import { InputSearch } from "@/src/shared/components/input-search";
+import { useHomeModel } from "./home.model";
 
 export default function Home() {
-  const handleTeste = (data: string) => {
-    console.log({ check: data });
-  };
+  const { searchProducts } = useHomeModel();
 
   return (
     <Container>
-      <InputSearch onSearch={handleTeste} placeholder="Buscar produtos" />
+      <InputSearch onSearch={searchProducts} placeholder="Buscar produtos" />
     </Container>
   );
 }
