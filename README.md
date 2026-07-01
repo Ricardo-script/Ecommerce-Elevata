@@ -30,19 +30,18 @@ https://www.figma.com/design/J7T5ggRKlo813JN73AHD4c/Ecommerce-Elevata?node-id=0-
 
 O protótipo contempla toda a experiência da aplicação, incluindo:
 
-- Tela de Login;
-- Tela Inicial;
-- Listagem de Produtos;
-- Pesquisa de Produtos;
-- Detalhes do Produto;
-- Produtos Favoritos;
-- Componentes reutilizáveis;
-- Guia de cores;
-- Tipografia;
-- Espaçamentos;
-- Ícones e elementos visuais.
+- Autenticação de usuários;
+- Listagem de produtos;
+- Pesquisa de produtos;
+- Visualização dos detalhes de um produto;
+- Gerenciamento de produtos favoritos;
+- Carrinho de compras;
+- Navegação protegida por autenticação;
+- Persistência segura da sessão do usuário utilizando Expo SecureStore;
+- Persistência local do carrinho de compras e dos produtos favoritos utilizando Expo SQLite;
+- Interface responsiva baseada em um protótipo do Figma.
 
-Todo o desenvolvimento da interface buscou manter fidelidade ao design proposto no Figma.
+Como se trata de um projeto demonstrativo, os dados da aplicação são obtidos por meio da API pública **DummyJSON**. A aplicação não possui um banco de dados remoto próprio; entretanto, informações como a sessão do usuário, o carrinho de compras e os produtos favoritos são persistidas localmente utilizando **Expo SecureStore** e **Expo SQLite**.
 
 ---
 
@@ -81,13 +80,14 @@ https://pravatar.cc/
 - React Native
 - Expo
 - Expo Router
+- Expo SQLite
+- Expo SecureStore (Secure Storage)
 - TypeScript
 - NativeWind (Tailwind CSS)
 - Axios
 - React Query (TanStack)
 - React Hook Form
 - Zod
-- Expo SQLite
 - Zustand
 
 ---

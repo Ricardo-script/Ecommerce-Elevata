@@ -1,5 +1,3 @@
-// src/database/migrations.ts
-
 import { db } from "./database";
 
 export async function runMigrations() {

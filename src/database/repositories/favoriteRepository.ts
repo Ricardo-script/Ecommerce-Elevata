@@ -1,5 +1,3 @@
-// src/database/repositories/FavoriteRepository.ts
-
 import { db } from "../database";
 import { FavoriteEntity } from "../types";
 
@@ -63,3 +61,84 @@ class FavoriteRepository {
 }
 
 export default new FavoriteRepository();
+
+// uso:
+
+/* 
+
+import favoriteRepository from "@/database/repositories/FavoriteRepository";
+
+await favoriteRepository.add({
+  productId: product.id,
+  title: product.title,
+  description: product.description,
+  category: product.category,
+  price: product.price,
+  discountPercentage: product.discountPercentage,
+  rating: product.rating,
+  stock: product.stock,
+  thumbnail: product.thumbnail,
+});
+
+//---------------------------------------------------------------------------------
+
+Verificar se é favorito
+
+Muito comum na tela de detalhes.
+
+const isFavorite = await favoriteRepository.isFavorite(
+  product.id
+);
+
+console.log(isFavorite);
+
+//--------------------------------------------------------------------------------
+
+Buscar favorito pelo ID do produto
+const favorite =
+  await favoriteRepository.getByProductId(
+    product.id
+  );
+
+console.log(favorite);
+
+------------------------------------------------------------------------------------
+
+Buscar todos os favoritos
+
+Muito usado na tela "Favoritos".
+
+const favorites =
+  await favoriteRepository.getAll();
+
+console.log(favorites);
+
+----------------------------------------------------------------------------------
+Remover favorito
+await favoriteRepository.remove(
+  product.id
+);
+
+------------------------------------------------------------------------------------
+
+Limpar todos os favoritos
+await favoriteRepository.clear();
+
+-------------------------------------------------------------------------------------
+
+Exemplo na Home
+const products = await productService.getProducts();
+
+const favorites =
+  await favoriteRepository.getAll();
+
+const favoriteIds = new Set(
+  favorites.map(item => item.productId)
+);
+
+const result = products.map(product => ({
+  ...product,
+  isFavorite: favoriteIds.has(product.id),
+}));
+
+*/
