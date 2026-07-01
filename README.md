@@ -14,7 +14,8 @@ Entre as principais funcionalidades implementadas estão:
 - Visualização dos detalhes de um produto;
 - Gerenciamento de produtos favoritos;
 - Navegação protegida por autenticação;
-- Persistência da sessão do usuário;
+- Persistência local da sessão do usuário, carrinho e produtos favoritos utilizando SQLite;
+- O carrinho e os produtos favoritos são persistidos localmente em SQLite.
 - Interface responsiva baseada em um protótipo do Figma.
 
 Como se trata de um projeto demonstrativo, nenhuma informação é persistida em um banco de dados real.
@@ -86,7 +87,7 @@ https://pravatar.cc/
 - React Query (TanStack)
 - React Hook Form
 - Zod
-- AsyncStorage
+- Expo SQLite
 - Zustand
 
 ---
@@ -235,6 +236,10 @@ src/
 ├── components/
 ├── constants/
 ├── contexts/
+├── database/
+│   ├── database.ts
+│   ├── migrations.ts
+│   └── repositories/
 ├── hooks/
 ├── models/
 ├── services/
@@ -376,6 +381,21 @@ Contém a configuração do Axios e os serviços responsáveis pelo consumo dos 
 
 ---
 
+## database/
+
+Responsável pela persistência local dos dados da aplicação utilizando **Expo SQLite**.
+
+Essa camada centraliza toda a comunicação com o banco de dados local, incluindo:
+
+- Criação e configuração do banco;
+- Migrations;
+- Repositories;
+- Persistência do carrinho;
+- Persistência dos produtos favoritos;
+- Persistência da sessão do usuário.
+
+A utilização de uma camada dedicada de banco de dados mantém a aplicação desacoplada da tecnologia de persistência, facilitando futuras evoluções e manutenção do projeto.
+
 ## viewmodels/
 
 Centraliza toda a lógica de negócio da aplicação.
@@ -448,4 +468,4 @@ Este projeto foi desenvolvido com foco em:
 
 O Ecommerce Elevata é um projeto de estudos desenvolvido para demonstrar a construção de uma aplicação moderna utilizando **React Native**, **Expo**, **Expo Router**, **NativeWind** e arquitetura **MVVM**.
 
-Embora utilize uma API pública para simulação dos dados, toda a estrutura foi planejada para reproduzir a organização encontrada em aplicações reais, código organizado, escalabilidade, manutenção e reutilização de código.
+Além do consumo da API pública DummyJSON, a aplicação utiliza **Expo SQLite** para persistência local de informações como sessão do usuário, carrinho de compras e produtos favoritos, simulando uma estratégia de armazenamento comum em aplicações mobile. E toda a estrutura foi planejada para reproduzir a organização encontrada em aplicações reais.

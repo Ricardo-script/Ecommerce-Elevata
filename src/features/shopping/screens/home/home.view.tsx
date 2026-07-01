@@ -1,6 +1,6 @@
 import { Container } from "@/src/shared/components";
 import { InputSearch } from "@/src/shared/components/input-search";
-import { Text } from "react-native";
+import { CategoryCarousel } from "../../components/category-carousel";
 import { OfferBanner } from "../../components/offer-banner";
 import { useHomeModel } from "./home.model";
 
@@ -11,10 +11,7 @@ export default function Home() {
     <Container>
       <InputSearch onSearch={searchProducts} placeholder="Buscar produtos" />
       <OfferBanner />
-      <Text>123</Text>
-      <Text>123</Text>
-      <Text>123</Text>
-      <Text>123</Text>
+      <CategoryCarousel />
     </Container>
   );
 }
